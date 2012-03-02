@@ -1,0 +1,25 @@
+
+
+<h1>Trending Positivity</h1>
+
+<table>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%= link_to entry.user.name, entry.user %> 
+   <% if entry.happ_type === 1 %>
+    <%= "is giving thanks for " %>
+     <% elsif entry.happ_type === 2 %>
+    <%= "is thinking positively about " %> 
+    <% else  %>
+    <%= "is praising " %>
+    <% end %>
+     <%= link_to entry.body, edit_entry_path(entry) %></td>
+    <td><%= link_to 'D', entry, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<P>
+<a href="/"> Home </a>

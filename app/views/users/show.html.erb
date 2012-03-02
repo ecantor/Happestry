@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+<p>
+  <b>ID:</b>
+  <%= @user.id %>
+</p>
+ <p>
+  <b>Entries:</b>
+  <%= @user.entries.count %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'User List', users_path %> |
+<%= link_to 'Trending Positivity', entries_path %>
+

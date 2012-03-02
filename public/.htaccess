@@ -1,0 +1,7 @@
+AuthUserFile /Users/ericcantor/Happestry/public/.htpasswd
+AuthGroupFile /dev/null
+AuthName "happy"
+AuthType Basic
+<limit GET>
+require valid-user
+</Limit>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User ID:</b>
+  <%= @entry.user_id %>
+  </p>
+<p>
+<b>Name:</b> 
+  <%= @entry.user.name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @entry.body %>
+</p>
+<p>
+  <b>Type:</b>
+  <%= @entry.happ_type %>
+</p>
+
+
+<%= link_to 'Edit This', edit_entry_path(@entry) %> |
+<%= link_to 'Trending Positivity', entries_path %>

@@ -1,0 +1,28 @@
+<%= form_for(@entry) do |f| %>
+  <% if @entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+      <% @entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <%= f.collection_select( :user_id, User.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :happ_type %><br />
+    <%= f.select(:happ_type, [['is giving thanks for', 1], ['is thinking positively about', 2], ['is praising', 3]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_field :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
