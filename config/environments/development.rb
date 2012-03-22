@@ -27,4 +27,9 @@ Happestry::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+ # Stuff for passwords
+#   config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Development") do |u, p|
+#     [u, p] == ['username','password']
+#  end
 end
