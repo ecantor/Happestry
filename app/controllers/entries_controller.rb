@@ -46,6 +46,9 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
+# Let's send an email when someone enters something
+        EntryMailer.welcome_email.deliver
+
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
         format.json { render json: @entry, status: :created, location: @entry }
       else
