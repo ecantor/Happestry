@@ -27,7 +27,7 @@ Happestry::Application.configure do
   :port                 => 587,
   :user_name            => "eric@lendcrowd.com",
   :domain             => "lendcrowd.com",
-  :password             => "newyork12",
+  :password             => "",
   :authentication       => :plain }
 
   # Print deprecation notices to the Rails logger
